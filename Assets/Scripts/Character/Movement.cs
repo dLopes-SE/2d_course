@@ -1,4 +1,5 @@
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -15,6 +16,12 @@ public class Movement : MonoBehaviour
 
     // Update is called once per frame
     void Update()
+    {
+        HorizontalMovement();
+
+    }
+
+    void HorizontalMovement()
     {
         float direction = Input.GetAxis("Horizontal");
         transform.Translate(walkSpeed * direction * Time.deltaTime, 0, 0);
